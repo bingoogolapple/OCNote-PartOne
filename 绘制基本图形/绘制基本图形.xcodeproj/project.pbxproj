@@ -15,6 +15,7 @@
 		310A96571AACD49000FEE4C0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 310A96551AACD49000FEE4C0 /* LaunchScreen.xib */; };
 		310A96631AACD49000FEE4C0 /* ______Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 310A96621AACD49000FEE4C0 /* ______Tests.m */; };
 		310A966E1AACD4A900FEE4C0 /* BGALineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 310A966D1AACD4A900FEE4C0 /* BGALineView.m */; };
+		310A96711AADDE6100FEE4C0 /* BGARectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 310A96701AADDE6100FEE4C0 /* BGARectView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,8 @@
 		310A96621AACD49000FEE4C0 /* ______Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "______Tests.m"; sourceTree = "<group>"; };
 		310A966C1AACD4A900FEE4C0 /* BGALineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGALineView.h; sourceTree = "<group>"; };
 		310A966D1AACD4A900FEE4C0 /* BGALineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGALineView.m; sourceTree = "<group>"; };
+		310A966F1AADDE6100FEE4C0 /* BGARectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGARectView.h; sourceTree = "<group>"; };
+		310A96701AADDE6100FEE4C0 /* BGARectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGARectView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +97,8 @@
 				310A96461AACD48F00FEE4C0 /* Supporting Files */,
 				310A966C1AACD4A900FEE4C0 /* BGALineView.h */,
 				310A966D1AACD4A900FEE4C0 /* BGALineView.m */,
+				310A966F1AADDE6100FEE4C0 /* BGARectView.h */,
+				310A96701AADDE6100FEE4C0 /* BGARectView.m */,
 			);
 			path = "绘制基本图形";
 			sourceTree = "<group>";
@@ -226,6 +231,7 @@
 			files = (
 				310A964F1AACD48F00FEE4C0 /* ViewController.m in Sources */,
 				310A966E1AACD4A900FEE4C0 /* BGALineView.m in Sources */,
+				310A96711AADDE6100FEE4C0 /* BGARectView.m in Sources */,
 				310A964C1AACD48F00FEE4C0 /* AppDelegate.m in Sources */,
 				310A96491AACD48F00FEE4C0 /* main.m in Sources */,
 			);

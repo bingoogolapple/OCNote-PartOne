@@ -24,8 +24,6 @@
     
     // 设置第二条直线的终点（自动把上一条直线的终点当做起点）
     CGContextAddLineToPoint(ctx, 100, 150);
-    // 设置第三条线的终点
-    CGContextAddLineToPoint(ctx, 150, 150);
     
     // 设置绘图颜色
     CGContextSetRGBStrokeColor(ctx, 1.0, 0.0, 0.0, 1.0);
@@ -35,6 +33,15 @@
     CGContextSetLineCap(ctx, kCGLineCapRound);
     // 设置线条的转角的样式
     CGContextSetLineJoin(ctx, kCGLineJoinRound);
+    // 渲染前两条线
+    CGContextStrokePath(ctx);
+    
+    
+    CGContextSetRGBStrokeColor(ctx, 0.0, 1.0, 0.0, 1.0);
+    // 重新设置第三条线的起点
+    CGContextMoveToPoint(ctx, 120, 120);
+    // 设置第三条线的终点
+    CGContextAddLineToPoint(ctx, 150, 150);
     
     // 绘制图形（渲染图形到view上）
     CGContextStrokePath(ctx);
