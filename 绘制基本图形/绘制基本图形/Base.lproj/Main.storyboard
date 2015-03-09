@@ -12,7 +12,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" id="mxz-Hz-YI1" customClass="BGALineView">
+                            <view contentMode="scaleToFill" id="mxz-Hz-YI1" customClass="BGACircleView">
                                 <rect key="frame" x="55" y="100" width="200" height="200"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="0.90196084976196289" green="0.92156869173049927" blue="0.26274511218070984" alpha="1" colorSpace="deviceRGB"/>
