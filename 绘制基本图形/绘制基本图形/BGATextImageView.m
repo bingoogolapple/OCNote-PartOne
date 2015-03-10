@@ -11,7 +11,23 @@
 @implementation BGATextImageView
 
 - (void)drawRect:(CGRect)rect {
-    [self drawText];
+//    [self drawText];
+    
+    [self drawImage];
+}
+
+- (void)drawImage {
+    UIImage *image = [UIImage imageNamed:@"me"];
+    
+    // 利用OC方法将图片绘制到layer上
+    // 将图片绘制到指定的位置
+    // [image drawAtPoint:CGPointMake(100, 100)];
+    
+    // 利用drawInRect方法绘制图片到layer，默认是拉伸
+    // [image drawInRect:CGRectMake(50, 50, 130, 100)];
+    
+    // 利用drawAsPatternInRect方法绘制图片到layer，默认是平铺
+    [image drawAsPatternInRect:CGRectMake(50, 50, 150, 100)];
 }
 
 - (void)drawText {
@@ -23,7 +39,6 @@
     CGContextStrokePath(ctx);
     // 不推荐使用C语言的方法绘制文字，因为quraz2d中的坐标系和UIKit中的坐标系不一致，绘制出来的文字是颠倒的，而且通过c语言绘制文字相当麻烦
 
-    
     
     NSMutableDictionary *mdict = [NSMutableDictionary dictionary];
     mdict[NSForegroundColorAttributeName] = [UIColor redColor];
