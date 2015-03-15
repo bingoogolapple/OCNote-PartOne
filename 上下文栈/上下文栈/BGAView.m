@@ -76,6 +76,13 @@
     // 此时会回到初始状态
     CGContextRestoreGState(ctx);
     CGContextStrokePath(ctx);
+    
+    
+    // 上下文栈已经空了，不能再取了，否则会报错
+//    CGContextMoveToPoint(ctx, 50, 180);
+//    CGContextAddLineToPoint(ctx, 150, 180);
+//    CGContextRestoreGState(ctx);
+//    CGContextStrokePath(ctx);
 }
 
 @end
