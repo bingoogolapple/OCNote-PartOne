@@ -9,6 +9,11 @@
 #import "BGAEditViewController.h"
 
 @interface BGAEditViewController ()
+@property (weak, nonatomic) IBOutlet UITextField *usernameTf;
+@property (weak, nonatomic) IBOutlet UITextField *phoneTf;
+@property (weak, nonatomic) IBOutlet UIButton *addBtn;
+
+- (IBAction)add:(UIButton *)sender;
 
 @end
 
@@ -16,22 +21,24 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    // 1.拿到通知中心
+    NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
+    // 2.注册监听
+    [center addObserver:self selector:@selector(textChanged) name:UITextFieldTextDidChangeNotification object:self.usernameTf];
+    [center addObserver:self selector:@selector(textChanged) name:UITextFieldTextDidChangeNotification object:self.phoneTf];
+    
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)textChanged {
+    self.addBtn.enabled = (self.usernameTf.text.length > 0 && self.phoneTf.text.length > 0);
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
-*/
 
+- (IBAction)add:(UIButton *)sender {
+    
+}
 @end

@@ -41,6 +41,10 @@
     self.loginBtn.enabled = (self.usernameTf.text.length > 0 && self.pwdTf.text.length > 0);
 }
 
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
 
 
 - (IBAction)remPwdChange:(UISwitch *)sender {
@@ -63,7 +67,9 @@
         [MBProgressHUD hideHUD];
         if([self.usernameTf.text isEqualToString:@"bga"] && [self.pwdTf.text isEqualToString:@"123"]) {
             // 自动类型的Segue，从控件到控制器；手动类型的Segue，从控制器到控制器
-            [self performSegueWithIdentifier:@"login2contact" sender:nil];
+//            [self performSegueWithIdentifier:@"login2contact" sender:nil];
+            
+            [self performSegueWithIdentifier:@"login2contact" sender:@"testsender"];
         } else {
 //            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"提示" message:@"用户名或密码错误" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
 //            [alertView show];
@@ -75,6 +81,7 @@
 
 // 在segue跳转之前调用，会传入performSegueWithIdentifier方法创建好的segue
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    NSLog(@"%@", sender);
     UIViewController *destinationViewController = segue.destinationViewController;
 //    destinationViewController.navigationItem.title = [NSString stringWithFormat:@"%@的联系人列表",self.usernameTf.text];
     destinationViewController.title = [NSString stringWithFormat:@"%@的联系人列表",self.usernameTf.text];
