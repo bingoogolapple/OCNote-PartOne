@@ -20,6 +20,7 @@
 		31203E111AB9E79900DEF598 /* MBProgressHUD+NJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 31203E0D1AB9E79900DEF598 /* MBProgressHUD+NJ.m */; };
 		31203E121AB9E79900DEF598 /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 31203E0E1AB9E79900DEF598 /* MBProgressHUD.bundle */; };
 		31203E131AB9E79900DEF598 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 31203E101AB9E79900DEF598 /* MBProgressHUD.m */; };
+		5341AB2C1ACFC1D500F6DF30 /* BGAContact.m in Sources */ = {isa = PBXBuildFile; fileRef = 5341AB2B1ACFC1D500F6DF30 /* BGAContact.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,8 @@
 		31203E0E1AB9E79900DEF598 /* MBProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MBProgressHUD.bundle; sourceTree = "<group>"; };
 		31203E0F1AB9E79900DEF598 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		31203E101AB9E79900DEF598 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		5341AB2A1ACFC1D500F6DF30 /* BGAContact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGAContact.h; sourceTree = "<group>"; };
+		5341AB2B1ACFC1D500F6DF30 /* BGAContact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGAContact.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +166,8 @@
 		31203DF71AB86A1500DEF598 /* Mode */ = {
 			isa = PBXGroup;
 			children = (
+				5341AB2A1ACFC1D500F6DF30 /* BGAContact.h */,
+				5341AB2B1ACFC1D500F6DF30 /* BGAContact.m */,
 			);
 			name = Mode;
 			sourceTree = "<group>";
@@ -284,6 +289,7 @@
 				31203DFA1AB86A7100DEF598 /* BGALoginViewController.m in Sources */,
 				31203DD51AB8693700DEF598 /* AppDelegate.m in Sources */,
 				31203E131AB9E79900DEF598 /* MBProgressHUD.m in Sources */,
+				5341AB2C1ACFC1D500F6DF30 /* BGAContact.m in Sources */,
 				31203E031AB86ABC00DEF598 /* BGAEditViewController.m in Sources */,
 				31203E111AB9E79900DEF598 /* MBProgressHUD+NJ.m in Sources */,
 				31203DD21AB8693700DEF598 /* main.m in Sources */,

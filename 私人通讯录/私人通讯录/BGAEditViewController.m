@@ -7,13 +7,13 @@
 //
 
 #import "BGAEditViewController.h"
+#import "BGAContactsTableViewController.h"
+#import "BGAContact.h"
 
 @interface BGAEditViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *usernameTf;
 @property (weak, nonatomic) IBOutlet UITextField *phoneTf;
 @property (weak, nonatomic) IBOutlet UIButton *addBtn;
-
-- (IBAction)add:(UIButton *)sender;
 
 @end
 
@@ -27,7 +27,6 @@
     // 2.注册监听
     [center addObserver:self selector:@selector(textChanged) name:UITextFieldTextDidChangeNotification object:self.usernameTf];
     [center addObserver:self selector:@selector(textChanged) name:UITextFieldTextDidChangeNotification object:self.phoneTf];
-    
 }
 
 - (void)textChanged {
@@ -38,7 +37,18 @@
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
-- (IBAction)add:(UIButton *)sender {
+- (IBAction)onClickAddBtn:(UIButton *)sender {
+    [self.navigationController popViewControllerAnimated:YES];
     
+    NSString *name = self.usernameTf.text;
+    NSString *phone = self.phoneTf.text;
+    
+    BGAContact *contact = [[BGAContact alloc] init];
+    contact.name = name;
+    contact.phone = phone;
+    if([self.mDelegate respondsToSelector:@selector(editViewControllerDidClickAddBtn:contact:)]) {
+        [self.mDelegate editViewControllerDidClickAddBtn:self contact:contact];
+    }
 }
+
 @end

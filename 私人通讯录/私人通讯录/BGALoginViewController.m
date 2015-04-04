@@ -85,6 +85,13 @@
     UIViewController *destinationViewController = segue.destinationViewController;
 //    destinationViewController.navigationItem.title = [NSString stringWithFormat:@"%@的联系人列表",self.usernameTf.text];
     destinationViewController.title = [NSString stringWithFormat:@"%@的联系人列表",self.usernameTf.text];
+    
+    
+    /*系统会自动帮我们执行以下代码
+    UIViewController *sourceVc = segue.sourceViewController;
+    UINavigationController *nav = sourceVc.navigationController;
+    [nav pushViewController:segue.destinationViewController animated:YES];
+     */
 }
 
 @end
