@@ -132,7 +132,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="contacts" textLabel="CWx-sW-Ia4" detailTextLabel="TAH-AU-aaA" style="IBUITableViewCellStyleValue1" id="hpG-FJ-J6Z">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="contacts" textLabel="CWx-sW-Ia4" detailTextLabel="TAH-AU-aaA" style="IBUITableViewCellStyleValue1" id="hpG-FJ-J6Z" customClass="BGAContactCell">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hpG-FJ-J6Z" id="Rmo-ft-7Dl">
                                     <autoresizingMask key="autoresizingMask"/>

@@ -10,6 +10,7 @@
 #import "BGAAddViewController.h"
 #import "BGAEditViewController.h"
 #import "BGAContact.h"
+#import "BGAContactCell.h"
 
 @interface BGAContactsTableViewController ()<UIActionSheetDelegate, BGAAddViewControllerDelegate, BGAEditViewControllerDelegate>
 @property (nonatomic, strong)NSMutableArray *contacts;
@@ -19,6 +20,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    self.tableView.rowHeight = 100;
 }
 
 - (NSMutableArray *)contacts {
@@ -33,13 +36,9 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *identifier = @"contacts";
-    // 缓存中找不到则到storyboard中找
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
-    
+    BGAContactCell *cell = [BGAContactCell cellWithTableView:tableView];
     BGAContact *contact = self.contacts[indexPath.row];
-    cell.textLabel.text = contact.name;
-    cell.detailTextLabel.text = contact.phone;
+    cell.contact = contact;
     return cell;
 }
 

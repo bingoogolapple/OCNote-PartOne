@@ -21,6 +21,7 @@
 		31203E121AB9E79900DEF598 /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 31203E0E1AB9E79900DEF598 /* MBProgressHUD.bundle */; };
 		31203E131AB9E79900DEF598 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 31203E101AB9E79900DEF598 /* MBProgressHUD.m */; };
 		5341AB2C1ACFC1D500F6DF30 /* BGAContact.m in Sources */ = {isa = PBXBuildFile; fileRef = 5341AB2B1ACFC1D500F6DF30 /* BGAContact.m */; };
+		53AF766B1ACFF507005678D3 /* BGAContactCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 53AF766A1ACFF507005678D3 /* BGAContactCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,8 @@
 		31203E101AB9E79900DEF598 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		5341AB2A1ACFC1D500F6DF30 /* BGAContact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGAContact.h; sourceTree = "<group>"; };
 		5341AB2B1ACFC1D500F6DF30 /* BGAContact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGAContact.m; sourceTree = "<group>"; };
+		53AF76691ACFF507005678D3 /* BGAContactCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGAContactCell.h; sourceTree = "<group>"; };
+		53AF766A1ACFF507005678D3 /* BGAContactCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGAContactCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +104,7 @@
 		31203DCE1AB8693700DEF598 /* 私人通讯录 */ = {
 			isa = PBXGroup;
 			children = (
+				53AF76681ACFF4DE005678D3 /* View */,
 				31203E0B1AB9E79900DEF598 /* MBProgressHUD */,
 				31203DF71AB86A1500DEF598 /* Mode */,
 				31203DF61AB86A0900DEF598 /* Controller */,
@@ -182,6 +186,15 @@
 				31203E101AB9E79900DEF598 /* MBProgressHUD.m */,
 			);
 			path = MBProgressHUD;
+			sourceTree = "<group>";
+		};
+		53AF76681ACFF4DE005678D3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				53AF76691ACFF507005678D3 /* BGAContactCell.h */,
+				53AF766A1ACFF507005678D3 /* BGAContactCell.m */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -290,6 +303,7 @@
 				31203DD51AB8693700DEF598 /* AppDelegate.m in Sources */,
 				31203E131AB9E79900DEF598 /* MBProgressHUD.m in Sources */,
 				5341AB2C1ACFC1D500F6DF30 /* BGAContact.m in Sources */,
+				53AF766B1ACFF507005678D3 /* BGAContactCell.m in Sources */,
 				31203E031AB86ABC00DEF598 /* BGAAddViewController.m in Sources */,
 				31203E111AB9E79900DEF598 /* MBProgressHUD+NJ.m in Sources */,
 				31203DD21AB8693700DEF598 /* main.m in Sources */,
