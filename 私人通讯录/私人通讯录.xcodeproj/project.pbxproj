@@ -14,8 +14,8 @@
 		31203DE01AB8693700DEF598 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31203DDE1AB8693700DEF598 /* LaunchScreen.xib */; };
 		31203DEC1AB8693700DEF598 /* _____Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 31203DEB1AB8693700DEF598 /* _____Tests.m */; };
 		31203DFA1AB86A7100DEF598 /* BGALoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31203DF91AB86A7100DEF598 /* BGALoginViewController.m */; };
-		31203E001AB86AA800DEF598 /* BGAAddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31203DFF1AB86AA800DEF598 /* BGAAddViewController.m */; };
-		31203E031AB86ABC00DEF598 /* BGAEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31203E021AB86ABC00DEF598 /* BGAEditViewController.m */; };
+		31203E001AB86AA800DEF598 /* BGAEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31203DFF1AB86AA800DEF598 /* BGAEditViewController.m */; };
+		31203E031AB86ABC00DEF598 /* BGAAddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31203E021AB86ABC00DEF598 /* BGAAddViewController.m */; };
 		31203E061AB87C7400DEF598 /* BGAContactsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31203E051AB87C7400DEF598 /* BGAContactsTableViewController.m */; };
 		31203E111AB9E79900DEF598 /* MBProgressHUD+NJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 31203E0D1AB9E79900DEF598 /* MBProgressHUD+NJ.m */; };
 		31203E121AB9E79900DEF598 /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 31203E0E1AB9E79900DEF598 /* MBProgressHUD.bundle */; };
@@ -47,10 +47,10 @@
 		31203DEB1AB8693700DEF598 /* _____Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "_____Tests.m"; sourceTree = "<group>"; };
 		31203DF81AB86A7000DEF598 /* BGALoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGALoginViewController.h; sourceTree = "<group>"; };
 		31203DF91AB86A7100DEF598 /* BGALoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGALoginViewController.m; sourceTree = "<group>"; };
-		31203DFE1AB86AA800DEF598 /* BGAAddViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGAAddViewController.h; sourceTree = "<group>"; };
-		31203DFF1AB86AA800DEF598 /* BGAAddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGAAddViewController.m; sourceTree = "<group>"; };
-		31203E011AB86ABC00DEF598 /* BGAEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGAEditViewController.h; sourceTree = "<group>"; };
-		31203E021AB86ABC00DEF598 /* BGAEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGAEditViewController.m; sourceTree = "<group>"; };
+		31203DFE1AB86AA800DEF598 /* BGAEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGAEditViewController.h; sourceTree = "<group>"; };
+		31203DFF1AB86AA800DEF598 /* BGAEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGAEditViewController.m; sourceTree = "<group>"; };
+		31203E011AB86ABC00DEF598 /* BGAAddViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGAAddViewController.h; sourceTree = "<group>"; };
+		31203E021AB86ABC00DEF598 /* BGAAddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGAAddViewController.m; sourceTree = "<group>"; };
 		31203E041AB87C7400DEF598 /* BGAContactsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGAContactsTableViewController.h; sourceTree = "<group>"; };
 		31203E051AB87C7400DEF598 /* BGAContactsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGAContactsTableViewController.m; sourceTree = "<group>"; };
 		31203E0C1AB9E79900DEF598 /* MBProgressHUD+NJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+NJ.h"; sourceTree = "<group>"; };
@@ -153,10 +153,10 @@
 				31203DD91AB8693700DEF598 /* Main.storyboard */,
 				31203DF81AB86A7000DEF598 /* BGALoginViewController.h */,
 				31203DF91AB86A7100DEF598 /* BGALoginViewController.m */,
-				31203DFE1AB86AA800DEF598 /* BGAAddViewController.h */,
-				31203DFF1AB86AA800DEF598 /* BGAAddViewController.m */,
-				31203E011AB86ABC00DEF598 /* BGAEditViewController.h */,
-				31203E021AB86ABC00DEF598 /* BGAEditViewController.m */,
+				31203DFE1AB86AA800DEF598 /* BGAEditViewController.h */,
+				31203DFF1AB86AA800DEF598 /* BGAEditViewController.m */,
+				31203E011AB86ABC00DEF598 /* BGAAddViewController.h */,
+				31203E021AB86ABC00DEF598 /* BGAAddViewController.m */,
 				31203E041AB87C7400DEF598 /* BGAContactsTableViewController.h */,
 				31203E051AB87C7400DEF598 /* BGAContactsTableViewController.m */,
 			);
@@ -290,10 +290,10 @@
 				31203DD51AB8693700DEF598 /* AppDelegate.m in Sources */,
 				31203E131AB9E79900DEF598 /* MBProgressHUD.m in Sources */,
 				5341AB2C1ACFC1D500F6DF30 /* BGAContact.m in Sources */,
-				31203E031AB86ABC00DEF598 /* BGAEditViewController.m in Sources */,
+				31203E031AB86ABC00DEF598 /* BGAAddViewController.m in Sources */,
 				31203E111AB9E79900DEF598 /* MBProgressHUD+NJ.m in Sources */,
 				31203DD21AB8693700DEF598 /* main.m in Sources */,
-				31203E001AB86AA800DEF598 /* BGAAddViewController.m in Sources */,
+				31203E001AB86AA800DEF598 /* BGAEditViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -352,6 +352,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -393,6 +394,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;

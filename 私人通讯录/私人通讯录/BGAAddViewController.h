@@ -7,7 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+// 如果没有这一句，- (void)editViewControllerDidClickAddBtn:(BGAEditViewController *) editVc contact:(BGAContact *)contact;编译不能通过
+@class BGAAddViewController,BGAContact;
+
+@protocol BGAAddViewControllerDelegate <NSObject>
+
+- (void)addViewControllerDidClickAddBtn:(BGAAddViewController *) editVc contact:(BGAContact *)contact;
+
+@end
 
 @interface BGAAddViewController : UIViewController
-
+@property (nonatomic,weak) id<BGAAddViewControllerDelegate> delegate;
 @end

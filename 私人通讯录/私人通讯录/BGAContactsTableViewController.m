@@ -7,10 +7,11 @@
 //
 
 #import "BGAContactsTableViewController.h"
+#import "BGAAddViewController.h"
 #import "BGAEditViewController.h"
 #import "BGAContact.h"
 
-@interface BGAContactsTableViewController ()<UIActionSheetDelegate, BGAEditViewControllerDelegate>
+@interface BGAContactsTableViewController ()<UIActionSheetDelegate, BGAAddViewControllerDelegate, BGAEditViewControllerDelegate>
 @property (nonatomic, strong)NSMutableArray *contacts;
 @end
 
@@ -18,7 +19,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
 }
 
 - (NSMutableArray *)contacts {
@@ -34,25 +34,42 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *identifier = @"contacts";
+    // 缓存中找不到则到storyboard中找
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
-    if(cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:identifier];
-    }
+    
     BGAContact *contact = self.contacts[indexPath.row];
     cell.textLabel.text = contact.name;
     cell.detailTextLabel.text = contact.phone;
     return cell;
 }
 
-// 无论是手动类型的segue还是自动类型的segue，在跳转之前都会执行该方法
+// 无论是手动类型的segue还是自动类型的segue，在跳转之前都会执行该方法    顺传用segue拿到目标控制器，逆传用代理
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    BGAEditViewController *editVc = segue.destinationViewController;
-    editVc.mDelegate = self;
+    UIViewController *vc = segue.destinationViewController;
+    if([vc isKindOfClass:[BGAAddViewController class]]) {
+        BGAAddViewController *addVc = (BGAAddViewController *)vc;
+        addVc.delegate = self;
+    } else if([vc isKindOfClass:[BGAEditViewController class]]) {
+        BGAEditViewController *editVc = (BGAEditViewController *)vc;
+        // 通过tableview获取被点击的行
+        NSIndexPath *path = [self.tableView indexPathForSelectedRow];
+        BGAContact *contact = self.contacts[path.row];
+        editVc.contact = contact;
+        editVc.delegate = self;
+    }
 }
 
-- (void)editViewControllerDidClickAddBtn:(BGAEditViewController *)editVc contact:(BGAContact *)contact {
+- (void)addViewControllerDidClickAddBtn:(BGAAddViewController *)editVc contact:(BGAContact *)contact {
     NSLog(@"添加联系人 %@,%@", contact.name, contact.phone);
     [self.contacts addObject:contact];
+    [self.tableView reloadData];
+}
+
+- (void)editViewControllerDidClickSaveBtn:(BGAEditViewController *)editViewController contact:(BGAContact *)contact {
+    // 引用传递，不用传contact回来
+    //    NSIndexPath *path = [self.tableView indexPathForSelectedRow];
+//    self.contacts[path.row] = contact;
+    
     [self.tableView reloadData];
 }
 

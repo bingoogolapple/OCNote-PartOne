@@ -7,15 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
-// 如果没有这一句，- (void)editViewControllerDidClickAddBtn:(BGAEditViewController *) editVc contact:(BGAContact *)contact;编译不能通过
-@class BGAEditViewController,BGAContact;
+@class BGAContact,BGAEditViewController;
 
 @protocol BGAEditViewControllerDelegate <NSObject>
 
-- (void)editViewControllerDidClickAddBtn:(BGAEditViewController *) editVc contact:(BGAContact *)contact;
+- (void) editViewControllerDidClickSaveBtn:(BGAEditViewController *)editViewController contact:(BGAContact *)contact;
 
 @end
 
 @interface BGAEditViewController : UIViewController
-@property (nonatomic,weak) id<BGAEditViewControllerDelegate> mDelegate;
+// 用户接收联系人列表传递过来的数据
+@property (nonatomic, strong) BGAContact *contact;
+@property (nonatomic, weak) id<BGAEditViewControllerDelegate> delegate;
 @end
