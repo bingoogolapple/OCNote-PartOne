@@ -27,6 +27,9 @@
     // 2.注册监听
     [center addObserver:self selector:@selector(textChanged) name:UITextFieldTextDidChangeNotification object:self.usernameTf];
     [center addObserver:self selector:@selector(textChanged) name:UITextFieldTextDidChangeNotification object:self.phoneTf];
+    
+    self.usernameTf.delegate = self;
+    self.phoneTf.delegate = self;
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -42,6 +45,7 @@
 }
 
 - (IBAction)onClickAddBtn:(UIButton *)sender {
+    [self.view endEditing:YES];
     [self.navigationController popViewControllerAnimated:YES];
     
     NSString *name = self.usernameTf.text;
@@ -53,6 +57,15 @@
     if([self.delegate respondsToSelector:@selector(addViewControllerDidClickAddBtn:contact:)]) {
         [self.delegate addViewControllerDidClickAddBtn:self contact:contact];
     }
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    if (textField == self.usernameTf) {
+        [self.phoneTf becomeFirstResponder];
+    } else if(textField == self.phoneTf) {
+        [self onClickAddBtn:self.addBtn];
+    }
+    return NO;
 }
 
 @end

@@ -15,7 +15,7 @@
 
 @end
 
-@interface BGAEditViewController : UIViewController
+@interface BGAEditViewController : UIViewController<UITextFieldDelegate>
 // 用户接收联系人列表传递过来的数据
 @property (nonatomic, strong) BGAContact *contact;
 @property (nonatomic, weak) id<BGAEditViewControllerDelegate> delegate;

@@ -26,6 +26,9 @@
     // 2.注册监听
     [center addObserver:self selector:@selector(textChanged) name:UITextFieldTextDidChangeNotification object:self.nameTf];
     [center addObserver:self selector:@selector(textChanged) name:UITextFieldTextDidChangeNotification object:self.phoneTf];
+    
+    self.nameTf.delegate = self;
+    self.phoneTf.delegate = self;
     [self fillData];
 }
 
@@ -67,12 +70,22 @@
 }
 
 - (IBAction)onClickSaveBtn:(UIButton *)sender {
+    [self.view endEditing:YES];
     [self.navigationController popViewControllerAnimated:YES];
     self.contact.name = self.nameTf.text;
     self.contact.phone = self.phoneTf.text;
     if ([self.delegate respondsToSelector:@selector(editViewControllerDidClickSaveBtn:contact:)]) {
         [self.delegate editViewControllerDidClickSaveBtn:self contact:self.contact];
     }
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    if (textField == self.nameTf) {
+        [self.phoneTf becomeFirstResponder];
+    } else if(textField == self.phoneTf) {
+        [self onClickSaveBtn:self.saveBtn];
+    }
+    return NO;
 }
 
 @end

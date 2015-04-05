@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface BGAContact : NSObject
+@interface BGAContact : NSObject<NSCoding>
 @property (nonatomic, copy) NSString *name;
 @property (nonatomic, copy) NSString *phone;
 @end

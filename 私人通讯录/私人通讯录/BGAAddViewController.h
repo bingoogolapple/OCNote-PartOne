@@ -16,6 +16,6 @@
 
 @end
 
-@interface BGAAddViewController : UIViewController
+@interface BGAAddViewController : UIViewController<UITextFieldDelegate>
 @property (nonatomic,weak) id<BGAAddViewControllerDelegate> delegate;
 @end
