@@ -14,6 +14,8 @@
 		53990A7A1AD2AA9800DECD1C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53990A791AD2AA9800DECD1C /* Images.xcassets */; };
 		53990A7D1AD2AA9800DECD1C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53990A7B1AD2AA9800DECD1C /* LaunchScreen.xib */; };
 		53990A891AD2AA9800DECD1C /* QQ____Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 53990A881AD2AA9800DECD1C /* QQ____Tests.m */; };
+		53990A941AD2BA3700DECD1C /* BGAContactsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53990A931AD2BA3700DECD1C /* BGAContactsTableViewController.m */; };
+		53990A971AD2BBAD00DECD1C /* BGAAddTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53990A961AD2BBAD00DECD1C /* BGAAddTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,10 @@
 		53990A821AD2AA9800DECD1C /* QQ主流框架Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "QQ主流框架Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		53990A871AD2AA9800DECD1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		53990A881AD2AA9800DECD1C /* QQ____Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "QQ____Tests.m"; sourceTree = "<group>"; };
+		53990A921AD2BA3700DECD1C /* BGAContactsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGAContactsTableViewController.h; sourceTree = "<group>"; };
+		53990A931AD2BA3700DECD1C /* BGAContactsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGAContactsTableViewController.m; sourceTree = "<group>"; };
+		53990A951AD2BBAD00DECD1C /* BGAAddTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGAAddTableViewController.h; sourceTree = "<group>"; };
+		53990A961AD2BBAD00DECD1C /* BGAAddTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGAAddTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +95,10 @@
 				53990A791AD2AA9800DECD1C /* Images.xcassets */,
 				53990A7B1AD2AA9800DECD1C /* LaunchScreen.xib */,
 				53990A6C1AD2AA9800DECD1C /* Supporting Files */,
+				53990A921AD2BA3700DECD1C /* BGAContactsTableViewController.h */,
+				53990A931AD2BA3700DECD1C /* BGAContactsTableViewController.m */,
+				53990A951AD2BBAD00DECD1C /* BGAAddTableViewController.h */,
+				53990A961AD2BBAD00DECD1C /* BGAAddTableViewController.m */,
 			);
 			path = "QQ主流框架";
 			sourceTree = "<group>";
@@ -220,7 +230,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				53990A751AD2AA9800DECD1C /* ViewController.m in Sources */,
+				53990A971AD2BBAD00DECD1C /* BGAAddTableViewController.m in Sources */,
 				53990A721AD2AA9800DECD1C /* AppDelegate.m in Sources */,
+				53990A941AD2BA3700DECD1C /* BGAContactsTableViewController.m in Sources */,
 				53990A6F1AD2AA9800DECD1C /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
