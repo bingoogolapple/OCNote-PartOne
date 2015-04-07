@@ -29,6 +29,12 @@
     TwoViewController *two = [[TwoViewController alloc] init];
     // 给即将要弹出的模态控制器包装一个导航控制器
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:two];
+    
+    /*
+    [self.view addSubview:nav.view];
+    // 将另一个控制器的view添加到本控制器的view中，需要将另一个控制器添加为childviewcontroller
+    [self addChildViewController:nav];
+    */
     [self presentViewController:nav animated:YES completion:^{
         NSLog(@"完全弹出two控制器");
     }];
