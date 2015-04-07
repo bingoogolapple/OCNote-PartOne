@@ -18,6 +18,7 @@
 		310A96711AADDE6100FEE4C0 /* BGARectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 310A96701AADDE6100FEE4C0 /* BGARectView.m */; };
 		310A96741AADF09900FEE4C0 /* BGACircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 310A96731AADF09900FEE4C0 /* BGACircleView.m */; };
 		310A96771AADFB2000FEE4C0 /* BGATextImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 310A96761AADFB2000FEE4C0 /* BGATextImageView.m */; };
+		531C5D3E1AD40E8E00D286F5 /* BGADownloadProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 531C5D3D1AD40E8E00D286F5 /* BGADownloadProgressView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,8 @@
 		310A96731AADF09900FEE4C0 /* BGACircleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGACircleView.m; sourceTree = "<group>"; };
 		310A96751AADFB2000FEE4C0 /* BGATextImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGATextImageView.h; sourceTree = "<group>"; };
 		310A96761AADFB2000FEE4C0 /* BGATextImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGATextImageView.m; sourceTree = "<group>"; };
+		531C5D3C1AD40E8E00D286F5 /* BGADownloadProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGADownloadProgressView.h; sourceTree = "<group>"; };
+		531C5D3D1AD40E8E00D286F5 /* BGADownloadProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGADownloadProgressView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +112,8 @@
 				310A96731AADF09900FEE4C0 /* BGACircleView.m */,
 				310A96751AADFB2000FEE4C0 /* BGATextImageView.h */,
 				310A96761AADFB2000FEE4C0 /* BGATextImageView.m */,
+				531C5D3C1AD40E8E00D286F5 /* BGADownloadProgressView.h */,
+				531C5D3D1AD40E8E00D286F5 /* BGADownloadProgressView.m */,
 			);
 			path = "绘制基本图形";
 			sourceTree = "<group>";
@@ -183,6 +188,7 @@
 		310A963B1AACD48F00FEE4C0 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = BGA;
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = bingoogolapple;
 				TargetAttributes = {
@@ -245,6 +251,7 @@
 				310A96771AADFB2000FEE4C0 /* BGATextImageView.m in Sources */,
 				310A964C1AACD48F00FEE4C0 /* AppDelegate.m in Sources */,
 				310A96491AACD48F00FEE4C0 /* main.m in Sources */,
+				531C5D3E1AD40E8E00D286F5 /* BGADownloadProgressView.m in Sources */,
 				310A96741AADF09900FEE4C0 /* BGACircleView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -436,6 +443,7 @@
 				310A96681AACD49000FEE4C0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		310A96691AACD49000FEE4C0 /* Build configuration list for PBXNativeTarget "绘制基本图形Tests" */ = {
 			isa = XCConfigurationList;
@@ -444,6 +452,7 @@
 				310A966B1AACD49000FEE4C0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

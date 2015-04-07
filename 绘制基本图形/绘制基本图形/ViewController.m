@@ -7,8 +7,10 @@
 //
 
 #import "ViewController.h"
+#import "BGADownloadProgressView.h"
 
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet BGADownloadProgressView *downloadPV;
 
 @end
 
@@ -16,12 +18,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (IBAction)valueChanged:(UISlider *)sender {
+    self.downloadPV.progress = sender.value;
+    
 }
 
 @end

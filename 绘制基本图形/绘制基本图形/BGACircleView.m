@@ -11,7 +11,7 @@
 @implementation BGACircleView
 
 - (void)drawRect:(CGRect)rect {
-    [self drawPie];
+    [self drawPie2];
 }
 
 - (void)drawPie {
@@ -31,6 +31,23 @@
     CGContextFillPath(ctx);
 }
 
+- (void)drawPie2 {
+    CGContextRef ctx = UIGraphicsGetCurrentContext();
+    
+    CGPoint center =  CGPointMake(100, 100);
+    CGFloat radius = 50;
+    CGFloat startA = 0;
+    CGFloat endA = M_PI_2;
+    // clockwise 是否顺时针
+    UIBezierPath *path = [UIBezierPath bezierPathWithArcCenter:center radius:radius startAngle:startA endAngle:endA clockwise:YES];
+    [path addLineToPoint:center];
+    [path closePath];
+    CGContextAddPath(ctx, path.CGPath);
+
+    
+    CGContextStrokePath(ctx);
+}
+
 - (void)drawArc {
     // 画圆弧
     // 1.获取上下文
@@ -44,6 +61,20 @@
     CGContextFillPath(ctx);
 }
 
+- (void)drawArc2 {
+    CGContextRef ctx = UIGraphicsGetCurrentContext();
+    
+    CGPoint center =  CGPointMake(100, 100);
+    CGFloat radius = 50;
+    CGFloat startA = 0;
+    CGFloat endA = M_PI_2;
+    // clockwise 是否顺时针
+    UIBezierPath *path = [UIBezierPath bezierPathWithArcCenter:center radius:radius startAngle:startA endAngle:endA clockwise:YES];
+    CGContextAddPath(ctx, path.CGPath);
+    
+    CGContextStrokePath(ctx);
+}
+
 - (void)drawCircle {
     // 画圆
     // 1.获取上下文
@@ -51,6 +82,14 @@
     // 2.画圆
     CGContextAddEllipseInRect(ctx, CGRectMake(50, 100, 100, 50));
     // 3.渲染
+    CGContextStrokePath(ctx);
+}
+
+- (void)drawCircle2 {
+    CGContextRef ctx = UIGraphicsGetCurrentContext();
+    UIBezierPath *path = [UIBezierPath bezierPathWithOvalInRect:CGRectMake(50, 50, 100, 100)];
+    CGContextAddPath(ctx, path.CGPath);
+    
     CGContextStrokePath(ctx);
 }
 

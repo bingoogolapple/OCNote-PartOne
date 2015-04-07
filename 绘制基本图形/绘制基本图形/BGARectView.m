@@ -12,10 +12,19 @@
 
 
 - (void)drawRect:(CGRect)rect {
-    [self drawRect];
+    [self drawRect2];
 }
 
-- (void)drawRect {
+- (void)drawRect2 {
+    CGContextRef ctx = UIGraphicsGetCurrentContext();
+    UIBezierPath *path = [UIBezierPath bezierPathWithRect:CGRectMake(50, 50, 100, 100)];
+//    path = [UIBezierPath bezierPathWithRoundedRect:CGRectMake(50, 50, 100, 100) cornerRadius:50];
+    CGContextAddPath(ctx, path.CGPath);
+    
+    CGContextStrokePath(ctx);
+}
+
+- (void)drawRect1 {
     // 绘制四边形
     // 1.获取上下文
     CGContextRef ctx = UIGraphicsGetCurrentContext();
@@ -51,7 +60,14 @@
     // 关闭起点和终点
     CGContextClosePath(ctx);
     // 3.渲染图形到layer上
-    CGContextStrokePath(ctx);
+//    CGContextStrokePath(ctx);
+    
+    CGContextSetLineWidth(ctx, 5);
+    [[UIColor blueColor] setFill];
+    [[UIColor redColor] setStroke];
+    
+    
+    CGContextDrawPath(ctx, kCGPathFillStroke);
 }
 
 

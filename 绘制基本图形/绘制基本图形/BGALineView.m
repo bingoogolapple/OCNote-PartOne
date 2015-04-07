@@ -12,6 +12,61 @@
 
 // 当自定义view第一次显示出来的时候就会调用drawRect方法
 - (void)drawRect:(CGRect)rect {
+    [self test4:rect];
+}
+
+// 画曲线
+- (void)test4:(CGRect)rect {
+    CGContextRef ctx = UIGraphicsGetCurrentContext();
+    UIBezierPath *path = [UIBezierPath bezierPath];
+    CGPoint startP = CGPointMake(10, 125);
+    CGPoint endP = CGPointMake(190, 125);
+    CGPoint controlP = CGPointMake(100, 50);
+    [path moveToPoint:startP];
+    [path addQuadCurveToPoint:endP controlPoint:controlP];
+    CGContextAddPath(ctx, path.CGPath);
+    CGContextStrokePath(ctx);
+}
+
+- (void)test3:(CGRect)rect {
+    CGContextRef ctx = UIGraphicsGetCurrentContext();
+    UIBezierPath *path1 = [UIBezierPath bezierPath];
+    [path1 moveToPoint:CGPointMake(10, 10)];
+    [path1 addLineToPoint:CGPointMake(90, 90)];
+    CGContextAddPath(ctx, path1.CGPath);
+    
+     UIBezierPath *path2 = [UIBezierPath bezierPath];
+    [path2 moveToPoint:CGPointMake(100, 100)];
+    [path2 addLineToPoint:CGPointMake(120, 180)];
+    CGContextAddPath(ctx, path2.CGPath);
+    
+    CGContextSetLineWidth(ctx, 10);
+    CGContextSetLineCap(ctx, kCGLineCapRound);
+//    CGContextSetRGBStrokeColor(ctx, 1, 1, 0, 1);
+    [[UIColor redColor] setStroke];
+    CGContextStrokePath(ctx);
+
+}
+
+- (void)test2:(CGRect)rect {
+    // {{0, 0}, {200, 200}}  rect = self.bounds
+    NSLog(@"%@",NSStringFromCGRect(rect));
+    
+    // CGContextRef     CG CoreGraphics  Ref 引用
+    // 目前学的上下文都跟UIGraphics有关，以后想要直接获取上下文，直接敲一个UIGraphics
+    CGContextRef ctx = UIGraphicsGetCurrentContext();
+    // 设置绘图信息（拼接路径）
+    UIBezierPath *path = [UIBezierPath bezierPath];
+    [path moveToPoint:CGPointMake(10, 10)];
+    [path addLineToPoint:CGPointMake(125, 125)];
+    [path addLineToPoint:CGPointMake(150, 180)];
+    // 直接把UIKit的路径转换成CoreGraphics，CG开头就能转
+    CGContextAddPath(ctx, path.CGPath);
+    
+    CGContextStrokePath(ctx);
+}
+
+- (void)test1:(CGRect)rect {
     // 1.取得和当前视图相关联的图形上下文（因为图形上下文决定绘制的输出目标）
     // 如果是在drawRect方法中调用UIGraphicsGetCurrent方法获取出来的就是Layer的上下文
     CGContextRef ctx = UIGraphicsGetCurrentContext();
