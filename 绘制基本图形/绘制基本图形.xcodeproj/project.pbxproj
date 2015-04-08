@@ -19,6 +19,9 @@
 		310A96741AADF09900FEE4C0 /* BGACircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 310A96731AADF09900FEE4C0 /* BGACircleView.m */; };
 		310A96771AADFB2000FEE4C0 /* BGATextImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 310A96761AADFB2000FEE4C0 /* BGATextImageView.m */; };
 		531C5D3E1AD40E8E00D286F5 /* BGADownloadProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 531C5D3D1AD40E8E00D286F5 /* BGADownloadProgressView.m */; };
+		531C5D7B1AD4ECEC00D286F5 /* NSAttributedString描述.m in Sources */ = {isa = PBXBuildFile; fileRef = 531C5D7A1AD4ECEC00D286F5 /* NSAttributedString描述.m */; };
+		531C5D7E1AD4F04000D286F5 /* BGAImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 531C5D7D1AD4F04000D286F5 /* BGAImageView.m */; };
+		53C0F2FF1AD4F2940065B3C3 /* BGASnowflakeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 53C0F2FE1AD4F2940065B3C3 /* BGASnowflakeView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +58,11 @@
 		310A96761AADFB2000FEE4C0 /* BGATextImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGATextImageView.m; sourceTree = "<group>"; };
 		531C5D3C1AD40E8E00D286F5 /* BGADownloadProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGADownloadProgressView.h; sourceTree = "<group>"; };
 		531C5D3D1AD40E8E00D286F5 /* BGADownloadProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGADownloadProgressView.m; sourceTree = "<group>"; };
+		531C5D7A1AD4ECEC00D286F5 /* NSAttributedString描述.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString描述.m"; sourceTree = "<group>"; };
+		531C5D7C1AD4F04000D286F5 /* BGAImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGAImageView.h; sourceTree = "<group>"; };
+		531C5D7D1AD4F04000D286F5 /* BGAImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGAImageView.m; sourceTree = "<group>"; };
+		53C0F2FD1AD4F2940065B3C3 /* BGASnowflakeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGASnowflakeView.h; sourceTree = "<group>"; };
+		53C0F2FE1AD4F2940065B3C3 /* BGASnowflakeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGASnowflakeView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +104,7 @@
 		310A96451AACD48F00FEE4C0 /* 绘制基本图形 */ = {
 			isa = PBXGroup;
 			children = (
+				531C5D7A1AD4ECEC00D286F5 /* NSAttributedString描述.m */,
 				310A964A1AACD48F00FEE4C0 /* AppDelegate.h */,
 				310A964B1AACD48F00FEE4C0 /* AppDelegate.m */,
 				310A964D1AACD48F00FEE4C0 /* ViewController.h */,
@@ -114,6 +123,10 @@
 				310A96761AADFB2000FEE4C0 /* BGATextImageView.m */,
 				531C5D3C1AD40E8E00D286F5 /* BGADownloadProgressView.h */,
 				531C5D3D1AD40E8E00D286F5 /* BGADownloadProgressView.m */,
+				531C5D7C1AD4F04000D286F5 /* BGAImageView.h */,
+				531C5D7D1AD4F04000D286F5 /* BGAImageView.m */,
+				53C0F2FD1AD4F2940065B3C3 /* BGASnowflakeView.h */,
+				53C0F2FE1AD4F2940065B3C3 /* BGASnowflakeView.m */,
 			);
 			path = "绘制基本图形";
 			sourceTree = "<group>";
@@ -245,10 +258,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53C0F2FF1AD4F2940065B3C3 /* BGASnowflakeView.m in Sources */,
 				310A964F1AACD48F00FEE4C0 /* ViewController.m in Sources */,
 				310A966E1AACD4A900FEE4C0 /* BGALineView.m in Sources */,
 				310A96711AADDE6100FEE4C0 /* BGARectView.m in Sources */,
+				531C5D7B1AD4ECEC00D286F5 /* NSAttributedString描述.m in Sources */,
 				310A96771AADFB2000FEE4C0 /* BGATextImageView.m in Sources */,
+				531C5D7E1AD4F04000D286F5 /* BGAImageView.m in Sources */,
 				310A964C1AACD48F00FEE4C0 /* AppDelegate.m in Sources */,
 				310A96491AACD48F00FEE4C0 /* main.m in Sources */,
 				531C5D3E1AD40E8E00D286F5 /* BGADownloadProgressView.m in Sources */,

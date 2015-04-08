@@ -21,11 +21,14 @@
     
     // 利用OC方法将图片绘制到layer上
     // 将图片绘制到指定的位置
-    // [image drawAtPoint:CGPointMake(100, 100)];
+//     [image drawAtPoint:CGPointMake(100, 100)];
     
     // 利用drawInRect方法绘制图片到layer，默认是拉伸
-    // [image drawInRect:CGRectMake(50, 50, 130, 100)];
+//     [image drawInRect:CGRectMake(50, 50, 130, 100)];
     
+    
+    // 设置裁剪区域，超出裁剪区域的都不会被裁剪
+//    UIRectClip(CGRectMake(50, 50, 100, 100));
     // 利用drawAsPatternInRect方法绘制图片到layer，默认是平铺
     [image drawAsPatternInRect:CGRectMake(50, 50, 150, 100)];
 }
@@ -47,8 +50,9 @@
     // 记住NSFontAttributeName这个常用的，其他的到头文件里面去找
     mdict[NSFontAttributeName] = [UIFont systemFontOfSize:20];
     
+    // 不会会自动换行
 //    [str drawAtPoint:CGPointMake(10, 10) withAttributes:mdict];
-    // 将文字绘制到指定的范围内，如果一行装不下会自动换行，当文字超出范围后就不显示
+    // 会自动换行，当文字超出范围后就不显示
     [str drawInRect:CGRectMake(50, 50, 100, 100) withAttributes:mdict];
 }
 
