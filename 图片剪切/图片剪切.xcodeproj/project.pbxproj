@@ -15,6 +15,7 @@
 		31E8B6B91AB5B38C0066AD72 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31E8B6B71AB5B38C0066AD72 /* LaunchScreen.xib */; };
 		31E8B6C51AB5B38D0066AD72 /* ____Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 31E8B6C41AB5B38D0066AD72 /* ____Tests.m */; };
 		31E8B6D01AB5B3F30066AD72 /* BGAView.m in Sources */ = {isa = PBXBuildFile; fileRef = 31E8B6CF1AB5B3F30066AD72 /* BGAView.m */; };
+		53C0F3341AD570100065B3C3 /* UIImage+Tool.m in Sources */ = {isa = PBXBuildFile; fileRef = 53C0F3331AD570100065B3C3 /* UIImage+Tool.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,8 @@
 		31E8B6C41AB5B38D0066AD72 /* ____Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "____Tests.m"; sourceTree = "<group>"; };
 		31E8B6CE1AB5B3F30066AD72 /* BGAView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGAView.h; sourceTree = "<group>"; };
 		31E8B6CF1AB5B3F30066AD72 /* BGAView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGAView.m; sourceTree = "<group>"; };
+		53C0F3321AD570100065B3C3 /* UIImage+Tool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Tool.h"; sourceTree = "<group>"; };
+		53C0F3331AD570100065B3C3 /* UIImage+Tool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Tool.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +97,8 @@
 				31E8B6A81AB5B38C0066AD72 /* Supporting Files */,
 				31E8B6CE1AB5B3F30066AD72 /* BGAView.h */,
 				31E8B6CF1AB5B3F30066AD72 /* BGAView.m */,
+				53C0F3321AD570100065B3C3 /* UIImage+Tool.h */,
+				53C0F3331AD570100065B3C3 /* UIImage+Tool.m */,
 			);
 			path = "图片剪切";
 			sourceTree = "<group>";
@@ -226,6 +231,7 @@
 			files = (
 				31E8B6B11AB5B38C0066AD72 /* ViewController.m in Sources */,
 				31E8B6D01AB5B3F30066AD72 /* BGAView.m in Sources */,
+				53C0F3341AD570100065B3C3 /* UIImage+Tool.m in Sources */,
 				31E8B6AE1AB5B38C0066AD72 /* AppDelegate.m in Sources */,
 				31E8B6AB1AB5B38C0066AD72 /* main.m in Sources */,
 			);
@@ -418,6 +424,7 @@
 				31E8B6CA1AB5B38D0066AD72 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		31E8B6CB1AB5B38D0066AD72 /* Build configuration list for PBXNativeTarget "图片剪切Tests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +433,7 @@
 				31E8B6CD1AB5B38D0066AD72 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -7,8 +7,10 @@
 //
 
 #import "ViewController.h"
+#import "UIImage+Tool.h"
 
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
 
 @end
 
@@ -16,12 +18,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    self.imageView.image = [UIImage imageWithName:@"me" border:5 borderColor:[UIColor blueColor]];
+    
+    
+     NSData *data = UIImagePNGRepresentation([UIImage imageWithCaptureView:self.view]);
+    [data writeToFile:@"/Users/iqeggandroid/test.png" atomically:YES];
 }
 
 @end
